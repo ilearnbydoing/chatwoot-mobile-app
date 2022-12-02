@@ -7,8 +7,8 @@ workflows:
         max_build_duration: 60
         instance_type: mac_mini_m1
         environment:
-             node: 18.0.0
              ndk: 21.1.6352462
+             node: 18.0.0
         scripts:
              - name: Install npm dependencies
                script: | 
