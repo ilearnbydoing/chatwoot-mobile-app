@@ -8,7 +8,6 @@ workflows:
         instance_type: mac_mini_m1
         environment:
           node: v16.11.1
-          npm: latest
         scripts:
            - name: Build Android APK
              working_directory: android
