@@ -15,7 +15,7 @@ workflows:
              script: ./gradlew assembleRelease
      
         artifacts:
-            - android/app/build/outputs/**/*.apk
+            - app/build/outputs/**/*.apk
             
         publishing:
           email:
