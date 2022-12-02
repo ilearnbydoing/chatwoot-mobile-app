@@ -9,9 +9,12 @@ workflows:
         environment:
              node: 16.9.0
         scripts:
-            - name: Build Android APK
-              working_directory: android
-              script: ./gradlew assembleRelease
+             - name: Install npm dependencies
+               script: | 
+                npm install
+             - name: Build Android APK
+               working_directory: android
+               script: ./gradlew assembleRelease
         artifacts:
             - app/build/outputs/**/*.apk
             
@@ -21,5 +24,5 @@ workflows:
               - imdurgeshgupta@gmail.com
             notify:
               success: true     # To not receive a notification when a build succeeds
-              failure: true    # To not receive a notification when a build fails
+              failure: false    # To not receive a notification when a build fails
    
