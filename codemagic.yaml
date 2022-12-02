@@ -8,6 +8,7 @@ workflows:
         instance_type: mac_mini_m1
         environment:
              node: 18.0.0
+             ndk: r23
         scripts:
              - name: Install npm dependencies
                script: | 
